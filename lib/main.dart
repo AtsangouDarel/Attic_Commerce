@@ -1,3 +1,5 @@
+import 'package:attic/consts/consts.dart';
+import 'package:attic/views/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,8 +13,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(),
+      debugShowCheckedModeBanner: false,
+      title: 'Attic',
+      theme: ThemeData(
+        scaffoldBackgroundColor:Colors.transparent,
+        appBarTheme: const AppBarTheme(backgroundColor: Colors.transparent),
+        fontFamily: regular,
+      ),
+      home: const SplashScreen(),
     );
   }
 }
