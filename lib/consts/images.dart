@@ -1,6 +1,6 @@
 //icons
 const icAdd = "assets/icons/add.png";
-const icAppLogo = "assets/icons/LogoTrue.png";
+const icAppLogo = "assets/icons/logo.png";
 const icAppleLogo = "assets/icons/apple_logo.png";
 const icArrow = "assets/icons/arrow.png";
 const icBell = "assets/icons/bell.png";
@@ -39,19 +39,19 @@ const icRefund = "assets/icons/refund.png";
 const icSearch = "assets/icons/search.png";
 const icShop = "assets/icons/shop.png";
 const icSplashBg = "assets/icons/splash_login_registration_background_image.png";
-const icSquareLogo = "assets/icons/square_logo.png";
+const icSquareLogo = "assets/icons/logo2.png";
 const icTodaysDeal = "assets/icons/todays_deal.png";
 const icTopCategories = "assets/icons/top_categories.png";
 const icTopSeller = "assets/icons/top_sellers.png";
 const icTrash = "assets/icons/trash.png";
-const icTwitterLogo = "assets/icons/twitter_logo.png";
+const icXLogo = "assets/icons/x_logo.png";
 const icWallet = "assets/icons/wallet.png";
 const icWhiteTick = "assets/icons/white_tick.png";
 const icWholeSale = "assets/icons/wholesale.png";
 
 //images
 
-const imgBackground = "assets/icons/bg.png";
+const imgBackground = "assets/icons/b.png";
 const imgB1 = "assets/images/b1.jpeg";
 const imgB2 = "assets/images/b2.jpeg";
 const imgB3 = "assets/images/b3.jpeg";
