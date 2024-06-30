@@ -1,6 +1,6 @@
 import 'package:attic/consts/consts.dart';
 import 'package:attic/consts/lists.dart';
-import 'package:attic/views/home_screen/home_screen.dart';
+import 'package:attic/views/home_screen/home.dart';
 import 'package:attic/views/signup_screen.dart';
 import 'package:attic/widgets_common/applogo_widget.dart';
 import 'package:attic/widgets_common/bg_widget.dart';
@@ -31,7 +31,7 @@ class LoginScreen extends StatelessWidget {
                 child: TextButton(onPressed: (){}, child: forgetPass.text.make())),
                 5.heightBox,
                 ourButton(color: blueColor, title: login, textColor: whiteColor, onPress: () {
-                  Get.to(() => const HomeScreen());
+                  Get.to(() => const Home());
                 })
                   .box
                   .width( context.screenWidth - 50)
