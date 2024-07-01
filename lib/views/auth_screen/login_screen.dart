@@ -2,10 +2,10 @@ import 'package:attic/consts/consts.dart';
 import 'package:attic/consts/lists.dart';
 import 'package:attic/views/home_screen/home.dart';
 import 'package:attic/views/signup_screen.dart';
-import 'package:attic/widgets_common/applogo_widget.dart';
-import 'package:attic/widgets_common/bg_widget.dart';
-import 'package:attic/widgets_common/custom_textfield.dart';
-import 'package:attic/widgets_common/our_button.dart';
+import 'package:attic/views/widgets_common/applogo_widget.dart';
+import 'package:attic/views/widgets_common/bg_widget.dart';
+import 'package:attic/views/widgets_common/custom_textfield.dart';
+import 'package:attic/views/widgets_common/our_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

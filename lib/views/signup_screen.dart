@@ -2,10 +2,10 @@ import 'package:attic/consts/consts.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../widgets_common/applogo_widget.dart';
-import '../widgets_common/bg_widget.dart';
-import '../widgets_common/custom_textfield.dart';
-import '../widgets_common/our_button.dart';
+import 'widgets_common/applogo_widget.dart';
+import 'widgets_common/bg_widget.dart';
+import 'widgets_common/custom_textfield.dart';
+import 'widgets_common/our_button.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
