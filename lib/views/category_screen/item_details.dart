@@ -1,7 +1,6 @@
 import 'package:attic/consts/consts.dart';
 import 'package:attic/consts/lists.dart';
 import 'package:attic/views/widgets_common/our_button.dart';
-import 'package:flutter/material.dart';
 
 class ItemDetails extends StatelessWidget {
   final String? title;

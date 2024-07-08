@@ -2,7 +2,6 @@ import 'package:attic/consts/consts.dart';
 import 'package:attic/consts/lists.dart';
 import 'package:attic/views/category_screen/category_details.dart';
 import 'package:attic/views/widgets_common/bg_widget.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 

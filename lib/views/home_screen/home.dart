@@ -4,7 +4,6 @@ import 'package:attic/views/cart_screen/cart_screen.dart';
 import 'package:attic/views/category_screen/category_screen.dart';
 import 'package:attic/views/home_screen/home_screen.dart';
 import 'package:attic/views/profile_screen/profile_screen.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../controllers/home_controller.dart';

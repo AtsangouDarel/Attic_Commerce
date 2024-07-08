@@ -1,7 +1,6 @@
 import 'package:attic/consts/consts.dart';
 import 'package:attic/views/auth_screen/login_screen.dart';
 import 'package:attic/views/widgets_common/applogo_widget.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class SplashScreen extends StatefulWidget {

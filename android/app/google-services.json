@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "261631506169",
+    "project_id": "atticecommerce",
+    "storage_bucket": "atticecommerce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:261631506169:android:b466561d9de4820876d428",
+        "android_client_info": {
+          "package_name": "com.example.attic"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYQtBQKAy5lSSlXSpnzgkamYgyAXhtkSE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

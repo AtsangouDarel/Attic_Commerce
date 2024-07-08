@@ -1,7 +1,6 @@
 import 'package:attic/consts/lists.dart';
 import 'package:attic/views/home_screen/components/featured_button.dart';
 import 'package:attic/views/widgets_common/home_buttons.dart';
-import 'package:flutter/material.dart';
 import 'package:attic/consts/consts.dart';
 
 

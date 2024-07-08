@@ -1,5 +1,4 @@
 import 'package:attic/consts/consts.dart';
-import 'package:flutter/widgets.dart';
 
 Widget detailsCard({width,String? count, String? title}) {
   return  Column(

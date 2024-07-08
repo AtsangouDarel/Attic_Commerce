@@ -1,5 +1,4 @@
 import 'package:attic/consts/consts.dart';
-import 'package:flutter/material.dart';
 
 Widget bgWidget({Widget? child}) {
   return Container(
