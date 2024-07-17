@@ -1,6 +1,6 @@
 const appname = "ATTIC";
 const appversion = "Version 1.0.0";
-const credits = "@Akofena_Digital";
+const credits = "@Attic";
 const email = "Email";
 const emailHint = "admin@gmail.com";
 const password = "Password";
