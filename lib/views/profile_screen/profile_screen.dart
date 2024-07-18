@@ -1,9 +1,13 @@
 import 'package:attic/consts/consts.dart';
 import 'package:attic/consts/lists.dart';
 import 'package:attic/controllers/auth_controller.dart';
+import 'package:attic/controllers/profile_controller.dart';
+import 'package:attic/services/firestore_services.dart';
 import 'package:attic/views/auth_screen/login_screen.dart';
 import 'package:attic/views/profile_screen/components/details_card.dart';
+import 'package:attic/views/profile_screen/components/edit_profile_screen.dart';
 import 'package:attic/views/widgets_common/bg_widget.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get/get.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -12,16 +16,40 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
+    var controller = Get.put(ProfileController());
+
     return bgWidget(
       child: Scaffold(
-      body: SafeArea(
+      body: StreamBuilder(
+        stream: FirestoreServices.getUser(currentUser!.uid),
+        
+        builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+
+            if(!snapshot.hasData){
+              return const Center(
+                child: CircularProgressIndicator(
+                  valueColor: AlwaysStoppedAnimation(blueColor),
+              ),
+              );
+            }
+            else{
+
+              var data = snapshot.data!.docs[0];
+
+
+              return SafeArea(
         child: Column(children: [
         
           //edit pofile button
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: const Align(
-              alignment: Alignment.topRight, child: Icon(Icons.edit, color: whiteColor)).onTap(() {}),
+              alignment: Alignment.topRight, child: Icon(Icons.edit, color: whiteColor)).onTap(() {
+                controller.nameController.text = data['name'];
+                controller.passController.text = data['password'];
+
+                Get.to(() => EditProfileScreen(data: data,));
+              }),
           ),
         
           //user details section
@@ -29,13 +57,19 @@ class ProfileScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: Row(
               children: [
-                Image.asset(imgProfile2, width: 100, fit: BoxFit.cover).box.roundedFull.clip(Clip.antiAlias).make(),
+
+
+                data['imageUrl'] == ''?
+                Image.asset(imgProfile2, width: 100, fit: BoxFit.cover).box.roundedFull.clip(Clip.antiAlias).make()
+                :
+                Image.network(data['imageUrl'], width: 100, fit: BoxFit.cover).box.roundedFull.clip(Clip.antiAlias).make(),
+                10.widthBox,
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                  "Dummy User".text.fontFamily(semibold).white.make(),
-                  "darel12@gmail.com".text.white.size(12).make(),
+                  "${data['name']}".text.fontFamily(semibold).white.make(),
+                  "${data['email']}".text.white.make(),
                 ],
                 ),
                 ),
@@ -57,9 +91,9 @@ class ProfileScreen extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              detailsCard(count: "00", title: "in your cart", width: context.screenWidth / 3.4),
-              detailsCard(count: "32", title: "in your wishlist", width: context.screenWidth / 3.4),
-              detailsCard(count: "67", title: "your orders", width: context.screenWidth / 3.4),
+              detailsCard(count: data['cart_count'], title: "in your cart", width: context.screenWidth / 3.3),
+              detailsCard(count: data['wishlist_count'], title: "in your wishlist", width: context.screenWidth / 3.3),
+              detailsCard(count: data['order_count'], title: "your orders", width: context.screenWidth / 3.3),
             ],
           ),
         
@@ -79,11 +113,26 @@ class ProfileScreen extends StatelessWidget {
                 title: profileButtonsList[index].text.fontFamily(semibold).color(darkFontGrey).make(),
               );
             }
-          ).box.white.rounded.margin(const EdgeInsets.all(12)).padding(const EdgeInsets.symmetric(horizontal: 16)).shadowSm.make().box.color(blueColor).make(),
+          )
+          .box
+          .white
+          .rounded
+          .margin(const EdgeInsets.all(12))
+          .padding(const EdgeInsets.symmetric(horizontal: 16))
+          .shadowSm
+          .make()
+          .box
+          .color(blueColor)
+          .make(),
         
         ],
                 ),
-      ),
-    ));
+      );
+            }
+
+        },
+    ),
+    ),
+    );
   }
 }
