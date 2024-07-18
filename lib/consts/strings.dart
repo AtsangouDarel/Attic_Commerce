@@ -21,7 +21,7 @@ const alreadyHaveAccount =  "Already have an account? ";
 
 
 //home strings
-const home = "Home", categories = "categories", cart = "Cart", account = "Account";
+const home = "Home", categories = "Categories", cart = "Cart", account = "Account";
 
 //home screen strings
 const searchanything = "Search anything...",
@@ -48,7 +48,7 @@ const searchanything = "Search anything...",
         automobile = "Automobile",
         kidtoys = "Kids & Toys",
         sports = "Sports",
-        jewerly = "jewerly",
+        jewerly = "Jewerly",
         cellphone = "Cellphone & Tab",
         furniture = "Furniture"
         ;

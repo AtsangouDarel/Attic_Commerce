@@ -5,7 +5,7 @@ import 'package:attic/controllers/profile_controller.dart';
 import 'package:attic/services/firestore_services.dart';
 import 'package:attic/views/auth_screen/login_screen.dart';
 import 'package:attic/views/profile_screen/components/details_card.dart';
-import 'package:attic/views/profile_screen/components/edit_profile_screen.dart';
+import 'package:attic/views/profile_screen/edit_profile_screen.dart';
 import 'package:attic/views/widgets_common/bg_widget.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get/get.dart';
