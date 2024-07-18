@@ -63,4 +63,4 @@ productsyoumaylike = "Products you may also like";
 
 //profile strings
 
-const wishlist = "My Wishlist", orders = "My Orders", messages = "Messages";
+const wishlist = "My Wishlist", orders = "My Orders", messages = "Messages", oldpass = "Old password", newpass = "Newpassword";
